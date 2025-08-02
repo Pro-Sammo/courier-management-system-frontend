@@ -6,6 +6,7 @@ import {
   Marker,
 } from "@react-google-maps/api";
 import { useSelector } from "react-redux";
+import { FILE_LOCATION } from "@/miscellaneous/constants";
 
 const containerStyle = { width: "100%", height: "600px" };
 
@@ -22,7 +23,7 @@ export default function OptimizedRouteMap({
 
   const user = useSelector((state: any) => state.auth.user);
 
-  const userMarkerUrl = `https://courier-parcel-media.s3.ap-south-1.amazonaws.com/cpms-storage/${user.photo}`;
+  const userMarkerUrl = `${FILE_LOCATION}/${user.photo}`;
 
   const waypoints = useMemo(() => {
     if (!deliveryStops || deliveryStops.length <= 1) return [];

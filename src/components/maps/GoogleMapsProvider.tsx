@@ -14,8 +14,8 @@ export default function GoogleMapsProvider({
     libraries: libraries as any,
   });
 
-  if (loadError) return <div>Error loading Google Maps</div>;
-  if (!isLoaded) return <div>Loading Google Maps...</div>;
+  if (loadError) return <div>Error loading </div>;
+  if (!isLoaded) return <div>Loading...</div>;
 
   return <>{children}</>;
 }

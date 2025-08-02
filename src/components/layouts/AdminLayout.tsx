@@ -34,8 +34,7 @@ export default function AdminLayout() {
         } fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform lg:translate-x-0 lg:static lg:inset-0 transition duration-200 ease-in-out lg:transition-none`}
       >
         <div className="flex items-center justify-center h-16 bg-blue-600">
-          <Package className="h-8 w-8 text-white" />
-          <span className="ml-2 text-xl font-bold text-white">CourierMS</span>
+          <span className="ml-2 text-xl font-bold text-white">Admin Panel</span>
         </div>
 
         <nav className="mt-8">

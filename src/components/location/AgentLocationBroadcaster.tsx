@@ -8,9 +8,6 @@ const AgentLocationBroadcaster = () => {
   const [isTracking, setIsTracking] = useState(false);
   const watchIdRef = useRef<number | null>(null);
 
-  console.log("isConnected", isConnected);
-  console.log("isTracking", isTracking);
-  console.log("watchIdRef", watchIdRef);
 
   const startTracking = () => {
     if (!navigator.geolocation) {
