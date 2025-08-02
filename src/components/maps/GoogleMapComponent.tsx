@@ -2,7 +2,6 @@ import {
   GoogleMap,
   Marker,
   DirectionsRenderer,
-  useJsApiLoader,
 } from "@react-google-maps/api";
 import { useEffect, useRef, useState } from "react";
 
@@ -25,16 +24,12 @@ const GoogleMapComponent = ({
   currentLocation,
   showDirections = true,
 }: Props) => {
-  const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey:import.meta.env.VITE_GOOGLE_API_KEY,
-    libraries: ["places"],
-  });
 
   const [directions, setDirections] = useState<google.maps.DirectionsResult | null>(null);
   const mapRef = useRef<google.maps.Map | null>(null);
 
   useEffect(() => {
-    if (!pickupLocation || !deliveryLocation || !isLoaded || !showDirections) return;
+    if (!pickupLocation || !deliveryLocation  || !showDirections) return;
 
     const directionsService = new google.maps.DirectionsService();
     directionsService.route(
@@ -51,10 +46,7 @@ const GoogleMapComponent = ({
         }
       }
     );
-  }, [pickupLocation, deliveryLocation, isLoaded, showDirections]);
-
-
-  if (!isLoaded) return <div className="flex justify-center items-center h-full">Loading map...</div>;
+  }, [pickupLocation, deliveryLocation, showDirections]);
 
   return (
     <GoogleMap

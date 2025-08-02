@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { GoogleMap, Marker, Autocomplete, useJsApiLoader } from "@react-google-maps/api"
+import { GoogleMap, Marker, Autocomplete } from "@react-google-maps/api"
 
 type LocationPickerProps = {
   value: string
@@ -18,10 +18,6 @@ export function LocationPicker({
   const [markerPosition, setMarkerPosition] = useState(defaultCenter)
   const [autocomplete, setAutocomplete] = useState<google.maps.places.Autocomplete | null>(null)
 
-  const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: import.meta.env.VITE_GOOGLE_API_KEY,
-    libraries: ["places"],
-  })
 
   const handlePlaceChanged = () => {
     if (autocomplete) {
@@ -51,9 +47,6 @@ export function LocationPicker({
       })
     }
   }
-
-  if (loadError) return <p className="text-red-500">Error loading Google Maps</p>
-  if (!isLoaded) return <p>Loading map...</p>
 
   return (
     <div className="space-y-2">

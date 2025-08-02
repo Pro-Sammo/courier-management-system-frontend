@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import {
   GoogleMap,
-  useJsApiLoader,
   DirectionsService,
   DirectionsRenderer,
   Marker,
@@ -20,10 +19,6 @@ export default function OptimizedRouteMap({
   const [error, setError] = useState<string | null>(null);
   const [userLocation, setUserLocation] =
     useState<google.maps.LatLngLiteral | null>(null);
-
-  const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: import.meta.env.VITE_GOOGLE_API_KEY,
-  });
 
   const user = useSelector((state: any) => state.auth.user);
 
@@ -64,7 +59,7 @@ export default function OptimizedRouteMap({
     }
   }, [onRouteCalculated]);
 
-  // Watch user's real-time location
+ 
   useEffect(() => {
     if (!navigator.geolocation) return;
 
@@ -92,8 +87,6 @@ export default function OptimizedRouteMap({
   const shouldRenderService =
     pickupLocation && deliveryStops?.length >= 1 && !directions && !error;
 
-  if (loadError) return <div>Error loading maps</div>;
-  if (!isLoaded) return <div>Loading...</div>;
 
   return (
     <GoogleMap
