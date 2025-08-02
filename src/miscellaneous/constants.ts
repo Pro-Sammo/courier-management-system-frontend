@@ -1,0 +1,1 @@
+export const FILE_LOCATION="https://courier-parcel-media.s3.ap-south-1.amazonaws.com/cpms-storage"
