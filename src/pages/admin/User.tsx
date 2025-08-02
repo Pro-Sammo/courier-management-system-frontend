@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Mail, Phone, Search, Users, AlertCircle, Loader2 } from "lucide-react";
+import { Mail, Phone, Search, Users, AlertCircle } from "lucide-react";
 import {
   useGetUsersQuery,
   useUpdateUserRoleMutation,

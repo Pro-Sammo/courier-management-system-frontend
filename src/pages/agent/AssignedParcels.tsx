@@ -8,7 +8,6 @@ import {
   Package,
   MapPin,
   Search,
-  Filter,
   MoreVertical,
   Navigation,
   Route,

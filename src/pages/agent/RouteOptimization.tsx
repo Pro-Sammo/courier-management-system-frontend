@@ -91,10 +91,10 @@ export default function RouteOptimization() {
 
   const handleStartNavigation = () => {
 
-    const origin = `${agentLocation.lat},${agentLocation.lng}`;
+    const origin = `${agentLocation?.lat },${agentLocation?.lng}`;
     const waypoints = deliveryStops
-      .map((stop) => `${stop.lat},${stop.lng}`)
-      .join("/");
+      ?.map((stop:any) => `${stop.lat},${stop.lng}`)
+      .join("/")
 
     const googleMapsUrl = `https://www.google.com/maps/dir/${origin}/${waypoints}`;
 
@@ -152,7 +152,7 @@ export default function RouteOptimization() {
       <Card>
         <CardContent>
           <div className="space-y-4">
-            {modifiedParcel?.length > 0 && modifiedParcel?.map((delivery, index) => (
+            {modifiedParcel && modifiedParcel?.map((delivery, index) => (
               <div
                 key={delivery?.id}
                 className="flex items-center gap-4 rounded-lg border p-4"
@@ -178,7 +178,7 @@ export default function RouteOptimization() {
                   </div>
                 </div>
                 <div className="flex gap-2">
-                  <StatusUpdateModal parcel={delivery} handleRefreshRoute={handleRefreshRoute} >
+                  <StatusUpdateModal parcel={delivery as any} handleRefreshRoute={handleRefreshRoute} >
                   <Button size="sm" variant="outline">
                     Update
                   </Button>

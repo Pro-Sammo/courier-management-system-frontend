@@ -123,7 +123,7 @@ export class NavigationService {
           travelMode: google.maps.TravelMode.DRIVING,
           unitSystem: google.maps.UnitSystem.METRIC,
         },
-        (response, status) => {
+        (response:any, status:any) => {
           if (status === google.maps.DistanceMatrixStatus.OK && response) {
             const element = response.rows[0].elements[0]
             if (element.status === "OK") {

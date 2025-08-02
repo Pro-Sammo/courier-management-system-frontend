@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Outlet, Link, useLocation } from "react-router-dom"
-import { Package, MapPin, History, User, LogOut, Menu, Search } from "lucide-react"
+import { Package, MapPin, History, LogOut, Menu, Search } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { useAppSelector, useAppDispatch } from "@/hooks/redux"
