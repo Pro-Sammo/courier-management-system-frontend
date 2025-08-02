@@ -25,7 +25,7 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!isAuthenticated || !user) return;
 
-    const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "http://localhost:1880";
+    const SOCKET_URL = import.meta.env.VITE_SOCKET_URL;
 
     socket = io(SOCKET_URL, {
       auth: {
@@ -76,7 +76,7 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
 
   const tryReconnect = () => {
     if (reconnectAttempts < maxReconnectAttempts) {
-      const delay = 2000 * (reconnectAttempts + 1); // exponential backoff
+      const delay = 2000 * (reconnectAttempts + 1); 
       setTimeout(() => {
         console.log(`🔁 Reconnecting attempt ${reconnectAttempts + 1}`);
         socket?.connect();
