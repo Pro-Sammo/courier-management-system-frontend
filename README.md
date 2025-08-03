@@ -8,8 +8,8 @@ A full-featured MERN Stack logistics management platform that enables customers 
 
 ---
 ## Admin Login Credentails
-Email : sammo@gmail.com
-Pass: 12345678
+- Email : sammo@gmail.com
+- Pass: 12345678
 
 ---
 ## Tech Stack
