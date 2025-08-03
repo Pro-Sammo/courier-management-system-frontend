@@ -7,7 +7,11 @@ A full-featured MERN Stack logistics management platform that enables customers 
 > 🔗 [Live Application URL](https://main.d3koorpmhi8mya.amplifyapp.com)
 
 ---
+## Admin Login Credentails
+Email : sammo@gmail.com
+Pass: 12345678
 
+---
 ## Tech Stack
 
 ### Frontend
