@@ -63,7 +63,7 @@ A full-featured MERN Stack logistics management platform that enables customers 
 
 ---
 
-## Advanced Features (Implemented/Planned)
+## Advanced Features (Implemented)
 - Email/SMS notifications
 
 ---
