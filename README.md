@@ -4,8 +4,7 @@ A full-featured MERN Stack logistics management platform that enables customers 
 
 ## Live Link
 
-> 🔗 [Live Application URL](https://your-deployed-app-link.com)  
-> 🧪 [Postman Collection](https://link-to-postman.com)
+> 🔗 [Live Application URL](https://main.d3koorpmhi8mya.amplifyapp.com)
 
 ---
 
