@@ -1,69 +1,87 @@
-# React + TypeScript + Vite
+# 📦 Courier and Parcel Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-featured MERN Stack logistics management platform that enables customers to book parcels, track deliveries in real time, and empowers admins and delivery agents with complete operational tools.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> 🔗 [Live Application URL](https://your-deployed-app-link.com)  
+> 🧪 [Postman Collection](https://link-to-postman.com)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧩 Tech Stack
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 💻 Frontend
+- **React.js**
+- **Redux Toolkit + RTK Query**
+- **Tailwind CSS / Shadcn UI**
+- **React Router**
+- **Socket.IO (Client)**
+- **Google Maps API**
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 🔧 Backend
+- **Node.js** with **Express.js**
+- **PostgreSQL** or **MongoDB**
+- **JWT Authentication**
+- **Socket.IO (Server)**
+- **Cloudinary (optional for parcel label uploads)**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔐 Roles and Functionalities
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 👤 Customer
+- Register/Login
+- Book parcel (pickup, delivery, size/type, COD/prepaid)
+- View bookings and statuses
+- Track parcel in **real-time on map**
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🚚 Delivery Agent
+- View assigned parcels
+- Update status (Picked Up, In Transit, Delivered, Failed)
+- View **optimized delivery route** via Google Maps API
+
+### 🛠️ Admin
+- Parcel Dashboard with:
+  - Daily bookings
+  - Failed deliveries
+  - COD totals
+- Assign agents to parcels
+- View/manage all users and bookings
+- Export reports (CSV/PDF)
+
+---
+
+## 🔁 Real-Time & Maps Features
+- Real-time delivery status via **Socket.IO**
+- **Geolocation tracking** of agents
+- Optimized multi-stop route generation
+- **Google Maps** with markers, directions, and live location
+
+---
+
+## ✨ Advanced Features (Implemented/Planned)
+- QR Code generation for parcels
+- Barcode scan for pickup/delivery confirmation
+- Email/SMS notifications
+- Multi-language support (e.g., English, Bengali)
+
+---
+
+## 📂 Project Structure
+
+```bash
+├── client/                     # React frontend
+│   ├── components/
+│   ├── pages/
+│   ├── store/
+│   ├── services/
+│   └── App.tsx
+├── server/                     # Express backend
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   ├── utils/
+│   └── index.js
+└── README.md
