@@ -28,20 +28,20 @@ A full-featured MERN Stack logistics management platform that enables customers 
 
 ---
 
-## 🔐 Roles and Functionalities
+## Roles and Functionalities
 
-### 👤 Customer
+### Customer
 - Register/Login
 - Book parcel (pickup, delivery, size/type, COD/prepaid)
 - View bookings and statuses
 - Track parcel in **real-time on map**
 
-### 🚚 Delivery Agent
+### Delivery Agent
 - View assigned parcels
 - Update status (Picked Up, In Transit, Delivered, Failed)
 - View **optimized delivery route** via Google Maps API
 
-### 🛠️ Admin
+### Admin
 - Parcel Dashboard with:
   - Daily bookings
   - Failed deliveries
