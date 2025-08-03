@@ -112,11 +112,6 @@ export default function Register() {
         admin: "/admin",
       }
       navigate(roleRoutes[response.data.role])
-
-      // toast({
-      //   title: "Registration Successful",
-      //   description: `Welcome, ${response.user.name}!`,
-      // })
     } catch (error: any) {
       toast(`${error.data.message}`)
     }
