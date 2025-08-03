@@ -22,7 +22,7 @@ A full-featured MERN Stack logistics management platform that enables customers 
 - **Socket.IO (Client)**
 - **Google Maps API**
 
-### 🔧 Backend
+### Backend
 - **Node.js** with **Express.js**
 - **PostgreSQL** or **MongoDB**
 - **JWT Authentication**
