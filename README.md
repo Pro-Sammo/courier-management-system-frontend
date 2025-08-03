@@ -24,10 +24,10 @@ A full-featured MERN Stack logistics management platform that enables customers 
 
 ### Backend
 - **Node.js** with **Express.js**
-- **PostgreSQL** or **MongoDB**
+- **PostgreSQL**
 - **JWT Authentication**
 - **Socket.IO (Server)**
-- **Cloudinary (optional for parcel label uploads)**
+- **AWS S3**
 
 ---
 
@@ -35,7 +35,7 @@ A full-featured MERN Stack logistics management platform that enables customers 
 
 ### Customer
 - Register/Login
-- Book parcel (pickup, delivery, size/type, COD/prepaid)
+- Book parcel
 - View bookings and statuses
 - Track parcel in **real-time on map**
 
@@ -64,9 +64,6 @@ A full-featured MERN Stack logistics management platform that enables customers 
 ---
 
 ## Advanced Features (Implemented/Planned)
-- QR Code generation for parcels
-- Barcode scan for pickup/delivery confirmation
 - Email/SMS notifications
-- Multi-language support (e.g., English, Bengali)
 
 ---
